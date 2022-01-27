@@ -21,7 +21,7 @@
     <main>
         <!-- Introduction -->
         <section>
-            <h1>Evan Puzon</h1>
+            <h1 style="border: 2px solid black;">Evan Puzon</h1>
         </section>
 
         <!-- Projects Table -->
@@ -30,19 +30,19 @@
             <!-- Card: Project 1 -->
             <section>
                 <h3>Project 1</h3>
-                <img src="" alt="project 1 image description"/>
+                <img src="" alt="project 1 image "/>
             </section>
 
             <!-- Card: Project 1 -->
             <section>
-                <img src="" alt="project 2 image description"/>
+                <img src="" alt="project 2 image "/>
                 <h3>Project 2</h3>
             </section>
 
             <!-- Card: Project 1 -->
             <section>
                 <h3>Project 1</h3>
-                <img src="" alt="project 2 image description"/>
+                <img src="" alt="project 2 image "/>
             </section>
         </section>
 
@@ -65,25 +65,25 @@
             <!-- Tech Card -->
             <section>
                 <img src="" alt="html logo"/>
-                <h3>HTML</h3>
+                <h3><span class="tech-name">HTML</span></h3>
             </section>
 
             <!-- Tech Card -->
             <section>
                 <img src="" alt="css logo"/>
-                <h3>CSS</h3>
+                <h3><span class="tech-name">CSS</span></h3>
             </section>
 
             <!-- Tech Card -->
             <section>
                 <img src="" alt="js logo"/>
-                <h3>JS</h3>
+                <h3><span class="tech-name">JS</span></h3>
             </section>
 
             <!-- Tech Card -->
             <section>
                 <img src="" alt="markdown logo"/>
-                <h3>Markdown</h3>
+                <h3><span class="tech-name">Markdown</span></h3>
             </section>
         </section>
 
@@ -112,16 +112,119 @@
         <section>
             <h2>Experiments</h2>
             
+            <hr>
+            <!-- Gif pet not part of main content, just around for fun -->
             <aside>
                 <p>Dialogue for gif pet to say something</p>
                 <img src="" alt="gif pet"/>
             </aside>
+
+            <!-- br tag -->
+            <p>This is dummy text in order to test out <br/>
+                line breaks and more. <br/>
+                Woohoo it worked
+            </p>
+
+            <!-- Code tag -->
+            <p>Did you know? The <code>grass()</code> method determines whether or not you need to go outside and touch grass</p>
+            <pre>   
+                    /\_____/\
+                   /  o   o  \
+                  ( ==  ^  == )
+                   )         (
+                  (           )
+                 ( (  )   (  ) )
+                (__(__)___(__)__)</pre>
+
+            <!-- Extra forms  -->
+            <h2>Extra Forms </h2>
+            <form>
+                <!-- Fieldset and legend -->
+                <fieldset>
+                    <legend>Light or Dark?</legend>
+
+                    <input type="radio" name="mode" id="light"/>
+                    <label for="light">Light Mode</label><br/>
+
+                    <input type="radio" name="mode" id="dark">
+                    <label for="dark">Dark Mode</label><br/>
+                </fieldset>
+            </form>
+
+            <form>
+                <label for="favorite-language">Favorite Language: </label>
+                <input list="languages" id="favorite-language" name="favorite-language" />
+                <datalist id="languages">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JS">
+                </datalist><br>
+
+                <label for="coin">Choose a coin</label>
+                <select name="coins" id="coin">
+                    <option value="">Amount</option>
+                    <option value="1">1 Cent</option>
+                    <option value="10">10 Cent</option>
+                    <option value="5">5 Cent</option>
+                    <option value="25">25 Cent</option>
+                </select>
+            </form>
+
+            <details>
+                <summary>Hidden Message: </summary>
+                If you found this, then welcome to the cool kids club
+            </details>
+
+            <!-- Table -->
+            <hr>
+            <h2>Cool Table</h2>
+            <table>
+                <caption>Games and Languages</caption>
+                <colgroup>
+                    <col>
+                    <col span="3" class="games">
+                    <col span="3" class="languages">
+                </colgroup>
+
+                <tr>
+                    <td></td>
+                    <th scope="col">Genshin Impact</th>
+                    <th scope="col">Valorant</th>
+                    <th scope="col">League</th>
+                    <th scope="col">HTML</th>
+                    <th scope="col">CSS</th>
+                    <th scope="col">JS</th>
+                </tr>
+
+                <tr>
+                    <th scope="row">Skill</th>
+                    <td>AR 57</td>
+                    <td>Bronze 3</td>
+                    <td>Plat 1</td>
+                    <td>4/5</td>
+                    <td>4/5</td>
+                    <td>4/5</td>
+                </tr>
+            </table>
             
+            <hr>
+
+            <h2>This is a Tree</h2>
+            <figure>
+                <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
+                <figcaption>This is a tree; With a lot of spiders</figcaption>
+            </figure>
         </section>
+
+    
     </main>
 
     <footer>
 
     </footer>
 </body>
+<!-- Script Tag -->
+<script>
+
+</script>
 </html>

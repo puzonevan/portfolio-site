@@ -147,7 +147,15 @@
             </video>
 
             <!-- Canvas Tags -->
-            
+            <canvas id="test" width="100" height="100" >
+            </canvas>
+            <script>
+                var c = document.getElementById("test");
+                var cx = c.getContext("2d");
+                cx.beginPath();
+                cx.arc(100, 100, 90, 0, 2 * Math.PI);
+                cx.stroke();
+            </script>
 
             <!-- Extra forms  -->
             <h2>Extra Forms </h2>

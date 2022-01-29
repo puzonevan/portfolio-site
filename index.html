@@ -127,7 +127,7 @@
             </p>
 
             <!-- Code and Pre tag -->
-            <p>Did you know? The <code>grass()</code> method determines whether or not you need to go outside and touch grass</p>
+            <p>Did you know? The <code>grass()</code> <b>method</b> determines <strong>whether or not</strong> you need to go <i>outside</i> and <em>touch grass</em></p>
             <pre>   
                     /\_____/\
                    /  o   o  \
@@ -137,6 +137,10 @@
                  ( (  )   (  ) )
                 (__(__)___(__)__)
             </pre>
+
+            <svg>
+                <circle cx="50" cy="50" r="40" />
+            </svg>
 
             <!-- Embed Tag -->
             <iframe src="https://open.spotify.com/embed/show/2dY2l2v95zz9HTlYvDSAdA?utm_source=generator" width="500" height="232"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -174,6 +178,7 @@
             </form>
 
             <form>
+                <!-- data list -->
                 <label for="favorite-language">Favorite Language: </label>
                 <input list="languages" id="favorite-language" name="favorite-language" />
                 <datalist id="languages">
@@ -182,6 +187,7 @@
                     <option value="JS">
                 </datalist><br>
 
+                <!-- select -->
                 <label for="coin">Choose a coin</label>
                 <select name="coins" id="coin">
                     <option value="">Amount</option>
@@ -189,6 +195,19 @@
                     <option value="10">10 Cent</option>
                     <option value="5">5 Cent</option>
                     <option value="25">25 Cent</option>
+                </select><br>
+
+                <!-- optgroup -->
+                <label for="color">Choose a Color: </label>
+                <select id="color">
+                    <optgroup label="primary">
+                        <option>Red</option>
+                        <option>Green</option>
+                        <option>Blue</option>
+                    </optgroup>
+                    <optgroup label="other">
+                        <option>Periwinkle</option>
+                    </optgroup>
                 </select>
             </form>
 
@@ -238,6 +257,10 @@
             </figure>
 
             <hr>
+
+            <picture>
+                <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
+            </picture>
 
     
         </section>

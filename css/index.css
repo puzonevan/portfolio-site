@@ -54,7 +54,7 @@ h1{
 }
 
 /* Project Cards */
-#projects{
+#projects, #mini-contact{
     width: 100%;
     display: flex; 
     flex-direction: row;
@@ -63,7 +63,7 @@ h1{
     background: var(--background-white); 
     margin-bottom: 5em;
 }
-#projects h2{
+#projects h2, #mini-contact h2{
     text-align: start;
     width: 90%;
     text-transform: uppercase;
@@ -136,7 +136,35 @@ h1{
     font-weight: light;
 }
 
-/* Technology Cards */
-.tech-card{
-
+/* Mini Contact */
+#mini-contact h2{
+    text-align: end;
+    color: var(--background-blue)
 }
+#mini-contact div, #mini-contact form{
+    width: 40%;
+    height: auto;
+}
+
+#mini-contact form{
+    background: var(--background-red);
+}
+
+#socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em;
+    background: var(--background-light-blue);
+}
+#socials a{
+    width: 50%;
+}
+#socials source, #socials img{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    
+}
+

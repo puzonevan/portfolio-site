@@ -22,9 +22,8 @@ p{
 }
 
 body{
-    width: 80%;
     margin: 0 auto;
-    background: var(--background-dark-blue);
+    background: var(--background-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,15 +35,17 @@ main{
     align-items: center;
 }
 
+/* Project Cards */
 .project-card{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 40vw;
-    margin: 1em;
+    width: 50%;
+    overflow: hidden;
+    margin: 1.5em auto;
     border-radius: 20px;
     background-color: var(--background-white);
-    box-shadow: rgb(55, 71, 133, .19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .project-card *{
     width: 50%;
@@ -52,7 +53,26 @@ main{
 .project-card h3{
     color: var(--text-black)
 }
+.project-card img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+/* Quote Section */
+#quote-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    background: var(--background-red)
+}
+#daily-quote{
+    font-family: serif;
+}
+
+/* Technology Cards */
 .tech-card{
 
 }

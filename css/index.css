@@ -84,40 +84,33 @@ h1{
 #project-3{
     background: var(--background-red);
 }
-/* .project-card{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 50%;
-    overflow: hidden;
-    margin: 1.5em auto;
-    border-radius: 20px;
-    background-color: var(--background-white);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.project-card *{
-    width: 50%;
-}
-.project-card h3{
-    color: var(--text-black)
-}
-.project-card img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
 
-/* Quote Section */
-#quote-block{
+/* Quote Sections */
+.quote-block{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 40vh;
-    background: var(--background-red)
+    height: 70vh;
 }
+#self-intro{
+    background: var(--background-light-blue);
+}
+#quote-block{
+    height: 50vh;
+    background: var(--background-blue);
+}
+#self-intro p{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
 #daily-quote{
     font-family: serif;
+    font-weight: light;
 }
 
 /* Technology Cards */

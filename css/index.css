@@ -60,7 +60,6 @@ h1{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    background: var(--background-white); 
     margin-bottom: 5em;
 }
 #projects h2, #mini-contact h2{
@@ -121,10 +120,6 @@ h1{
     background: hsla(201, 55%, 78%, 1);
     background: linear-gradient(180deg, hsla(201, 55%, 78%, 1) 0%, hsla(228, 41%, 37%, 1) 100%);
 }
-#quote-block{
-    height: 50vh;
-    background: var(--background-blue);
-}
 #self-intro p{
     width: 60%;
     margin: 0 auto;
@@ -133,10 +128,6 @@ h1{
     line-height: 1.5em;
 }
 
-#daily-quote{
-    font-family: serif;
-    font-weight: light;
-}
 
 /* Mini Contact */
 #mini-contact h2{
@@ -172,3 +163,10 @@ h1{
     height: auto;
 }
 
+/* Footer */
+footer{
+    height: 10vh;
+}
+footer p{
+    color: var(--text-black);
+}

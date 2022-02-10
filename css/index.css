@@ -6,10 +6,13 @@
     --background-light-blue: #A8D0E6;
     --background-red: #F76C6C;
     --background-yellow: #F8E9A1;
+    --background-white: #FFFFFF;
     --text-white: #FFFFFF;
+    --text-black: #000000;
 }
 
 h1, h2, h3, h4, h5, h6{
+    text-align: center;
     font-family: 'PT Sans Narrow', sans-serif;
     color: var(--text-white);
 }
@@ -19,6 +22,37 @@ p{
 }
 
 body{
+    width: 80%;
+    margin: 0 auto;
     background: var(--background-dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40vw;
+    margin: 1em;
+    border-radius: 20px;
+    background-color: var(--background-white);
+    box-shadow: rgb(55, 71, 133, .19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.project-card *{
+    width: 50%;
+}
+.project-card h3{
+    color: var(--text-black)
+}
+
+.tech-card{
+
+}

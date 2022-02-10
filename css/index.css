@@ -55,7 +55,16 @@ h1{
 
 
 /* Project Cards */
-.project-card{
+#projects{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#projects h2{
+    width: 100%;
+}
+/* .project-card{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -76,7 +85,7 @@ h1{
     max-width: 100%;
     height: auto;
     display: block;
-}
+} */
 
 /* Quote Section */
 #quote-block{

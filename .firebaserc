@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "portfolio-site-f3477"
-  }
+    "default": "portfolio-site-f3477",
+    "css": "portoflio-site-v2"
+  },
+  "targets": {}
 }

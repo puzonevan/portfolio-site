@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header.css" media="screen" type="text/css">
     <link rel="stylesheet" href="/css/index.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/forms.css" media="screen" type="text/css">
     <title>Evan Puzon</title>
 </head>
 <body>
@@ -96,21 +97,16 @@
                     <img src="/assets/images/icons/instagram/icons8-instagram-60.png" alt="github icon">
                 </picture></a>
             </div>
-            <form>
-                <div>
-                    <label for="name">Name: </label>
-                    <input id="name" name="name" type="text" required>
-                </div>
-                <div>
-                    <label for="email">Email: </label>
-                    <input id="email" name="email" type="text" required>
-                </div>
-                <div>
-                    <label for="message">Message: </label>
-                    <textarea id="message" name="message" rows="4" cols="50">
-                        What do you want to tell me? 
-                    </textarea>
-                </div>
+            <form id="mini-contact-form">
+                <label for="name" hidden>Name: </label>
+                <input id="name" name="name" type="text" placeholder="Name" required>
+            
+                <label for="email" hidden>Email: </label>
+                <input id="email" name="Email" type="text" placeholder="Email" required>
+            
+                <label for="message" hidden>Message: </label>
+                <textarea id="message" name="message" rows="4" cols="50">Message</textarea>
+                
             </form>
         </section>
 
@@ -122,131 +118,132 @@
         </section>
 
         <!-- Experiments  -->
-        <section>
-            <h2>Experiments</h2>
-            
-            <hr>
-            <!-- Gif pet not part of main content, just around for fun -->
-            <aside>
-                <p>Dialogue for gif pet to say something</p>
-                <img src="/assets/images/pepe.png" alt="gif pet"/>
-            </aside>
-
-            <!-- br tag -->
-            <p>This is dummy text in order to test out <br/>
-                line breaks and more. <br/>
-                Woohoo it worked
-            </p>
-
-            <!-- Code and Pre tag -->
-            <p>Did you know? The <code>grass()</code> <b>method</b> determines <strong>whether or not</strong> you need to go <i>outside</i> and <em>touch grass</em></p>
-            <pre>   
-                    /\_____/\
-                   /  o   o  \
-                  ( ==  ^  == )
-                   )         (
-                  (           )
-                 ( (  )   (  ) )
-                (__(__)___(__)__)
-            </pre>
-
-            <svg>
-                <circle cx="50" cy="50" r="40" />
-            </svg>
-
-            <!-- Embed Tag -->
-            <iframe src="https://open.spotify.com/embed/show/2dY2l2v95zz9HTlYvDSAdA?utm_source=generator" width="500" height="232"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-
-            <!-- Video Tags -->
-            <video controls width="500">
-                <source src="assets/videos/Trail_of_the_Qilin.mp4" type="video/mp4">
-                Sad, no video unfortunately
-            </video>
-
-            <!-- Canvas Tags -->
-            <canvas id="test" width="100" height="100" >
-            </canvas>
-            <script>
-                var c = document.getElementById("test");
-                var cx = c.getContext("2d");
-                cx.beginPath();
-                cx.arc(100, 100, 90, 0, 2 * Math.PI);
-                cx.stroke();
-            </script>
-
-            <!-- Extra forms  -->
-            <h2>Extra Forms </h2>
-            <form>
-                <!-- Fieldset and legend -->
-                <fieldset>
-                    <legend>Light or Dark?</legend>
-
-                    <input type="radio" name="mode" id="light"/>
-                    <label for="light">Light Mode</label><br/>
-
-                    <input type="radio" name="mode" id="dark">
-                    <label for="dark">Dark Mode</label><br/>
-                </fieldset>
-            </form>
-
-            <form>
-                <!-- data list -->
-                <label for="favorite-language">Favorite Language: </label>
-                <input list="languages" id="favorite-language" name="favorite-language" />
-                <datalist id="languages">
-                    <option value="HTML">
-                    <option value="CSS">
-                    <option value="JS">
-                </datalist><br>
-
-                <!-- select -->
-                <label for="coin">Choose a coin</label>
-                <select name="coins" id="coin">
-                    <option value="">Amount</option>
-                    <option value="1">1 Cent</option>
-                    <option value="10">10 Cent</option>
-                    <option value="5">5 Cent</option>
-                    <option value="25">25 Cent</option>
-                </select><br>
-
-                <!-- optgroup -->
-                <label for="color">Choose a Color: </label>
-                <select id="color">
-                    <optgroup label="primary">
-                        <option>Red</option>
-                        <option>Green</option>
-                        <option>Blue</option>
-                    </optgroup>
-                    <optgroup label="other">
-                        <option>Periwinkle</option>
-                    </optgroup>
-                </select>
-            </form>
-
-            <details>
-                <summary>Hidden Message: </summary>
-                If you found this, then welcome to the cool kids club
-            </details>
-            
-            <hr>
-
-            <h2>This is a Tree</h2>
-            <figure>
-                <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
-                <figcaption>This is a tree; With a lot of spiders</figcaption>
-            </figure>
-
-            <hr>
-
-            <picture>
-                <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
-            </picture>
-
-            <audio controls src="assets/audio/randomsound.mp3">
-            </audio>
+        <template>
+            <section>
+                <h2>Experiments</h2>
+                
+                <hr>
+                <!-- Gif pet not part of main content, just around for fun -->
+                <aside>
+                    <p>Dialogue for gif pet to say something</p>
+                    <img src="/assets/images/pepe.png" alt="gif pet"/>
+                </aside>
     
-        </section>
-
+                <!-- br tag -->
+                <p>This is dummy text in order to test out <br/>
+                    line breaks and more. <br/>
+                    Woohoo it worked
+                </p>
+    
+                <!-- Code and Pre tag -->
+                <p>Did you know? The <code>grass()</code> <b>method</b> determines <strong>whether or not</strong> you need to go <i>outside</i> and <em>touch grass</em></p>
+                <pre>   
+                        /\_____/\
+                       /  o   o  \
+                      ( ==  ^  == )
+                       )         (
+                      (           )
+                     ( (  )   (  ) )
+                    (__(__)___(__)__)
+                </pre>
+    
+                <svg>
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+    
+                <!-- Embed Tag -->
+                <iframe src="https://open.spotify.com/embed/show/2dY2l2v95zz9HTlYvDSAdA?utm_source=generator" width="500" height="232"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    
+                <!-- Video Tags -->
+                <video controls width="500">
+                    <source src="assets/videos/Trail_of_the_Qilin.mp4" type="video/mp4">
+                    Sad, no video unfortunately
+                </video>
+    
+                <!-- Canvas Tags -->
+                <canvas id="test" width="100" height="100" >
+                </canvas>
+                <script>
+                    var c = document.getElementById("test");
+                    var cx = c.getContext("2d");
+                    cx.beginPath();
+                    cx.arc(100, 100, 90, 0, 2 * Math.PI);
+                    cx.stroke();
+                </script>
+    
+                <!-- Extra forms  -->
+                <h2>Extra Forms </h2>
+                <form>
+                    <!-- Fieldset and legend -->
+                    <fieldset>
+                        <legend>Light or Dark?</legend>
+    
+                        <input type="radio" name="mode" id="light"/>
+                        <label for="light">Light Mode</label><br/>
+    
+                        <input type="radio" name="mode" id="dark">
+                        <label for="dark">Dark Mode</label><br/>
+                    </fieldset>
+                </form>
+    
+                <form>
+                    <!-- data list -->
+                    <label for="favorite-language">Favorite Language: </label>
+                    <input list="languages" id="favorite-language" name="favorite-language" />
+                    <datalist id="languages">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JS">
+                    </datalist><br>
+    
+                    <!-- select -->
+                    <label for="coin">Choose a coin</label>
+                    <select name="coins" id="coin">
+                        <option value="">Amount</option>
+                        <option value="1">1 Cent</option>
+                        <option value="10">10 Cent</option>
+                        <option value="5">5 Cent</option>
+                        <option value="25">25 Cent</option>
+                    </select><br>
+    
+                    <!-- optgroup -->
+                    <label for="color">Choose a Color: </label>
+                    <select id="color">
+                        <optgroup label="primary">
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                        </optgroup>
+                        <optgroup label="other">
+                            <option>Periwinkle</option>
+                        </optgroup>
+                    </select>
+                </form>
+    
+                <details>
+                    <summary>Hidden Message: </summary>
+                    If you found this, then welcome to the cool kids club
+                </details>
+                
+                <hr>
+    
+                <h2>This is a Tree</h2>
+                <figure>
+                    <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
+                    <figcaption>This is a tree; With a lot of spiders</figcaption>
+                </figure>
+    
+                <hr>
+    
+                <picture>
+                    <img src="https://www.wired.com/images_blogs/wiredscience/2011/03/pakistan_tree_spiders.jpg" alt="tree with spiders">
+                </picture>
+    
+                <audio controls src="assets/audio/randomsound.mp3">
+                </audio>
+        
+            </section>
+        </template>
     
     </main>
 

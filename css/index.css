@@ -78,6 +78,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .project-card div{
     height: 25%;
@@ -117,7 +118,8 @@ h1{
     height: 80vh;
 }
 #self-intro{
-    background: var(--background-light-blue);
+    background: hsla(201, 55%, 78%, 1);
+    background: linear-gradient(180deg, hsla(201, 55%, 78%, 1) 0%, hsla(228, 41%, 37%, 1) 100%);
 }
 #quote-block{
     height: 50vh;
@@ -139,7 +141,7 @@ h1{
 /* Mini Contact */
 #mini-contact h2{
     text-align: end;
-    color: var(--background-blue)
+    color: var(--background-blue);
 }
 #mini-contact div, #mini-contact form{
     width: 40%;
@@ -148,6 +150,7 @@ h1{
 
 #mini-contact form{
     background: var(--background-red);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 #socials{
@@ -155,7 +158,9 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2em;
-    background: var(--background-light-blue);
+    background: hsla(228, 41%, 37%, 1);
+    background: linear-gradient(225deg, hsla(228, 41%, 37%, 1) 0%, hsla(201, 55%, 78%, 1) 100%);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 #socials a{
     width: 50%;
@@ -165,6 +170,5 @@ h1{
     margin: auto;
     width: 50%;
     height: auto;
-    
 }
 

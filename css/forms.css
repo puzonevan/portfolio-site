@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --input-red: #f56262;
+    
+}
+
+form{
+    padding: 2em;
+}
+
+input, textarea{
+    font-family: 'PT Sans', sans-serif;
+    padding: .5em;
+    width: 80%;
+    display: block;
+    margin: .5em auto;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+textarea{
+    resize: none;
+}
+
+#mini-contact form{
+    background: hsla(0, 90%, 70%, 1);
+
+    background: linear-gradient(135deg, hsla(0, 90%, 70%, 1) 0%, hsla(50, 86%, 80%, 1) 100%);
+
+}
+#mini-contact-form input, #mini-contact-form textarea{
+    background: var(--background-red);
+    border: 1px solid var(--background-white);
+}
+
+#mini-contact-form input::placeholder , #mini-contact-form textarea{
+    color: var(--background-white);
+}

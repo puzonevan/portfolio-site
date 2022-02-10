@@ -43,14 +43,14 @@ h1{
     text-align: center;
 }
 #intro{
-    height: 100vh;
+    height: 90vh;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     background: var(--background-white);
     width: 100%;
     font-size: 5rem;
-    letter-spacing: 1rem;
+    letter-spacing: 1.5rem;
 }
 
 

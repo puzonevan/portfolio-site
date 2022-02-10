@@ -1,1 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --background-dark-blue: #24305E;
+    --background-blue: #374785;
+    --background-light-blue: #A8D0E6;
+    --background-red: #F76C6C;
+    --background-yellow: #F8E9A1;
+    --background-white: #F5F5F5;
+    --text-white: #FFFFFF;
+    --text-black: #000000;
+}
+
+header{
+    width: 100%;
+    background: var(--background-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem 0;
+}
+nav{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+a{
+    font-family: 'PT Sans', sans-serif;
+    color: var(--background-blue);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--background-red);
+}

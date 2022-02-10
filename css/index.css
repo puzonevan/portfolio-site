@@ -1,1 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --background-dark-blue: #24305E;
+    --background-blue: #374785;
+    --background-light-blue: #A8D0E6;
+    --background-red: #F76C6C;
+    --background-yellow: #F8E9A1;
+    --text-white: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: var(--text-white);
+}
+p{  
+    font-family: 'PT Sans', sans-serif;
+    color: var(--text-white);
+}
+
+body{
+    background: var(--background-dark-blue);
+}
+

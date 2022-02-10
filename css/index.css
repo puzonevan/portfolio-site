@@ -24,7 +24,7 @@ p{
 
 body{
     margin: 0 auto;
-    background: var(--background-blue);
+    background: var(--background-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,16 +53,36 @@ h1{
     letter-spacing: 1.5rem;
 }
 
-
 /* Project Cards */
 #projects{
+    width: 100%;
     display: flex; 
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    background: var(--background-white); 
+    margin-bottom: 5em;
 }
 #projects h2{
-    width: 100%;
+    text-align: start;
+    width: 90%;
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    color: var(--background-red);
+}
+.project-card{
+    width: 30%;
+    height: 50vh;
+}
+#project-1{
+    background: var(--background-dark-blue);
+}
+#project-2{
+    background: var(--background-yellow);
+}
+#project-3{
+    background: var(--background-red);
 }
 /* .project-card{
     display: flex;

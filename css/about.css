@@ -152,3 +152,29 @@ footer{
 footer p{
     color: var(--text-black);
 }
+
+/* Small Device */
+@media (max-width: 768px) {  
+    h1{
+        letter-spacing: .7rem;
+    }
+    #personas, #hobbies{
+        flex-direction: column;
+        align-items: center;
+    }
+    #personas h2, #hobbies h2{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .persona, .hobby{
+        width: 80%;
+    }
+    .persona p{
+        margin: 0em 0 2rem 0;
+    }
+
+    #icons a{
+        font-size: 1rem;
+    }
+}
+

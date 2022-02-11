@@ -8,7 +8,7 @@ h2, h3, h4, h5, h6{
 }
 p{  
     font-family: 'PT Sans', sans-serif;
-    color: var(--text-black);
+    color: var(--text-white);
 }
 
 body{
@@ -136,6 +136,7 @@ h1{
     text-align: center;
     width: 75%;
     line-height: 1.5em;
+    
 }
 #project-1{
     background: var(--background-dark-blue);
@@ -149,10 +150,95 @@ h1{
 #project-3{
     background: var(--background-red);
 }
+#project-3 p{
+    color:  #3A3B3C;
+}
 
 footer{
     height: 10vh;
 }
 footer p{
     color: var(--text-black);
+}
+
+/* Small Device */
+@media (max-width: 768px) {
+    h1{
+        letter-spacing: .5rem;
+    }  
+
+    #projects, #mini-contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects h2, #mini-contact h2{
+        text-align: center;
+    }
+    .project-card{
+        width: 80%;
+    }
+
+    #resume{
+        padding: 1em;
+    }
+    #profile{
+        flex-direction: column;
+        align-items: start;
+    }
+    #profile *{
+        width: 80%;
+    }
+
+    
+    #work-skill h2{
+        width: 50%;
+        letter-spacing: 0;
+    }
+    #work-skill #work{
+        width: 50%;
+    }
+    #work-skill .skill{
+        width: 25%;
+    }
+}
+
+/* Medium Device */
+@media (max-width: 992px) { 
+    h1{
+        letter-spacing: .5rem;
+    }  
+
+    #projects, #mini-contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects h2, #mini-contact h2{
+        text-align: center;
+    }
+    .project-card{
+        width: 80%;
+    }
+
+    #resume{
+        padding: 1em;
+    }
+    #profile{
+        flex-direction: column;
+        align-items: start;
+    }
+    #profile *{
+        width: 80%;
+    }
+
+    
+    #work-skill h2{
+        width: 50%;
+        letter-spacing: 0;
+    }
+    #work-skill #work{
+        width: 50%;
+    }
+    #work-skill .skill{
+        width: 25%;
+    }
 }

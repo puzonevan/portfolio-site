@@ -68,6 +68,7 @@ h1{
     max-width: 30%;
     border-radius: 50%;
     border: 2px solid white;
+    margin: .1em 0 ;
 }
 .persona p{
     text-align: justify;

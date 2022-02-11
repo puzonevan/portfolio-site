@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@keyframes fadeUp {
+    from{
+        margin-top: 100%;
+        opacity: 0%;
+    }
+    to{
+        margin-top: 0%;
+        opacity: 100%;
+    }
+}
+
 :root{
     --background-dark-blue: #24305E;
     --background-blue: #374785;
@@ -18,12 +29,17 @@ header{
     flex-direction: row;
     justify-content: center;
     padding: 2rem 0;
+    animation-name: fadeUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 nav{
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    
+    
 }
 a{
     font-family: 'PT Sans', sans-serif;
@@ -32,6 +48,7 @@ a{
 }
 a:hover{
     color: var(--background-red);
+    
 }
 
 /* Small Device */

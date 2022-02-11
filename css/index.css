@@ -150,7 +150,10 @@ footer p{
 }
 
 /* Small Device */
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
+    h1{
+        letter-spacing: .7rem;
+    }  
     #self-intro p{
         width: 90%;
     }

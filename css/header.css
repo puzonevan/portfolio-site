@@ -33,3 +33,23 @@ a{
 a:hover{
     color: var(--background-red);
 }
+
+/* Medium Device */
+@media (max-width: 768px) {  
+    nav{
+        justify-content: space-between;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Device */
+@media (max-width: 992px) { 
+    nav{
+        justify-content: space-between;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+}

@@ -78,25 +78,30 @@ h1{
 
 #persona-1{
     background: var(--background-red);
+    /* background: linear-gradient(180deg, hsl(0, 90%, 70%, 1) 60%, hsla(0, 0%, 100%, 1) 100%); */
 }
 #persona-1 button{
     border: none;
     padding: .7em 2em;
-    border: 2px solid var(--text-white);
-    background: var(--background-red);
-    color: var(--text-white);
-    margin: 1em 0 2em 0;
-}
-#persona-1 button:hover{
     border: 2px solid var(--background-red);
     background: var(--text-white);
     color: var(--background-red);
+    margin: 1em 0 2em 0;
+}
+#persona-1 button:hover{
+    border: 2px solid var(--text-white);
+    background: var(--background-red);
+    color: var(--text-white);
+    
 }
 #persona-2{
     background: var(--background-light-blue);
+    /* background: linear-gradient(180deg, hsla(201, 55%, 78%, 1) 60%, hsla(0, 0%, 100%, 1) 100%); */
 }
 #persona-3{
     background: var(--background-dark-blue);
+   
+    /* background: linear-gradient(180deg, hsla(228, 45%, 25%, 1) 60%, hsla(0, 0%, 100%, 1) 100%); */
 }
 
 #current-game{

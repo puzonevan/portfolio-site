@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h2, h3, h4, h5, h6{
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: var(--text-black);
+}
+p{  
+    font-family: 'PT Sans', sans-serif;
+    color: var(--text-black);
+}
+body{
+    margin: 0 auto;
+    background: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    color: var(--background-dark-blue);
+    text-align: center;
+    letter-spacing: 1.5rem;
+}
+
+.persona{
+    
+}
+
+#persona-1{
+    background: var(--background-red);
+}
+#persona-2{
+    background: var(--background-light-blue);
+}
+#persona-3{
+    background: var(--background-dark-blue);
+}

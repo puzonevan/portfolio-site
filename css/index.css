@@ -149,12 +149,42 @@ footer p{
     color: var(--text-black);
 }
 
-/* Medium Device */
+/* Small Device */
 @media (max-width: 768px) {  
-    
+    #self-intro p{
+        width: 90%;
+    }
+    #projects, #mini-contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects h2, #mini-contact h2{
+        text-align: center;
+    }
+    .project-card{
+        width: 80%;
+    }
+
+    #mini-contact div, #mini-contact form{
+        width: 50%;
+    }
+
+    #socials source, #socials img{
+        width: 80%;
+    }
 }
 
-/* Small Device */
+/* Medium Device */
 @media (max-width: 992px) { 
-    
+    #self-intro p{
+        width: 80%;
+    }
+
+    #mini-contact div, #mini-contact form{
+        width: 70%;
+    }
+
+    #socials source, #socials img{
+        width: 25%;
+    }
 }

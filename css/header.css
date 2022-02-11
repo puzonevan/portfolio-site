@@ -34,7 +34,7 @@ a:hover{
     color: var(--background-red);
 }
 
-/* Medium Device */
+/* Small Device */
 @media (max-width: 768px) {  
     nav{
         justify-content: space-between;
@@ -44,7 +44,7 @@ a:hover{
     }
 }
 
-/* Small Device */
+/* Medium Device */
 @media (max-width: 992px) { 
     nav{
         justify-content: space-between;

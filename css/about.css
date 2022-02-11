@@ -6,7 +6,7 @@ h2, h3, h4, h5, h6{
     font-family: 'PT Sans Narrow', sans-serif;
     color: var(--text-white);
 }
-p{  
+p, button{  
     font-family: 'PT Sans', sans-serif;
     color: var(--text-white);
 }
@@ -53,21 +53,44 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: start;
     width: 30%;
+    height: auto;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    overflow: hidden;
 }
 .persona h3, .hobby h3{
     font-size: 1.7em;
     letter-spacing: .1em;
+    margin: 1em 0 .5em 0;
+}
+.persona img{
+    max-width: 30%;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 .persona p{
     text-align: justify;
     width: 75%;
     line-height: 1.5em;
+    margin: .5em 0;
 }
 
 #persona-1{
     background: var(--background-red);
+}
+#persona-1 button{
+    border: none;
+    padding: .7em 2em;
+    border: 2px solid var(--text-white);
+    background: var(--background-red);
+    color: var(--text-white);
+    margin: 1em 0 2em 0;
+}
+#persona-1 button:hover{
+    border: 2px solid var(--background-red);
+    background: var(--text-white);
+    color: var(--background-red);
 }
 #persona-2{
     background: var(--background-light-blue);

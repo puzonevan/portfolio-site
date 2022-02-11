@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/contact.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/forms.css" media="screen" type="text/css">
     <title>Evan Puzon</title>
 </head>
 <body>
@@ -18,30 +20,48 @@
     </header>
 
     <main>
-        <section>
-            <h2>Socials</h2>
-            <div>
-
-            </div>
+        <section id="intro">
+            <h1>Connect with me!</h1>
         </section>
 
-        <section>
-            <h2>Contact Me</h2>
-            <form>
-                <div>
-                    <label for="name">Name: </label>
-                    <input id="name" name="name" type="text" required>
-                </div>
-                <div>
-                    <label for="email">Email: </label>
-                    <input id="email" name="email" type="text" required>
-                </div>
-                <div>
-                    <label for="message">Message: </label>
-                    <textarea id="message" name="message" rows="4" cols="50">
-                        What do you want to tell me? 
-                    </textarea>
-                </div>
+        <section id="mini-contact">
+            <h2>Say Hello!</h2>
+            <div id="socials">
+                <a href="https://www.linkedin.com/in/evanpuzon/"><picture>
+                    <source media="(min-width: 992px)" srcset="/assets/images/icons/linkedin/icons8-linkedin-480.png">
+                    <source media="(min-width: 768px)" srcset="/assets/images/icons/linkedin/icons8-linkedin-120.png">
+                    <source media="(min-width: 320px)" srcset="/assets/images/icons/linkedin/icons8-linkedin-60.png">
+                    <img src="/assets/images/icons/linkedin/icons8-linkedin-60.png" alt="linkedin icon">
+                </picture></a>
+                <a href="https://github.com/puzonevan"><picture>
+                    <source media="(min-width: 992px)" srcset="/assets/images/icons/github/icons8-github-480.png">
+                    <source media="(min-width: 768px)" srcset="/assets/images/icons/github/icons8-github-120.png">
+                    <source media="(min-width: 320px)" srcset="/assets/images/icons/github/icons8-github-60.png">
+                    <img src="/assets/images/icons/github/icons8-github-60.png" alt="github icon">
+                </picture></a>
+                <a href=""><picture>
+                    <source media="(min-width: 992px)" srcset="/assets/images/icons/facebook/icons8-facebook-480.png">
+                    <source media="(min-width: 768px)" srcset="/assets/images/icons/facebook/icons8-facebook-120.png">
+                    <source media="(min-width: 320px)" srcset="/assets/images/icons/facebook/icons8-facebook-60.png">
+                    <img src="/assets/images/icons/facebook/icons8-facebook-60.png" alt="facebook icon">
+                </picture></a>
+                <a href=""><picture>
+                    <source media="(min-width: 992px)" srcset="/assets/images/icons/instagram/icons8-instagram-480.png">
+                    <source media="(min-width: 768px)" srcset="/assets/images/icons/instagram/icons8-instagram-120.png">
+                    <source media="(min-width: 320px)" srcset="/assets/images/icons/instagram/icons8-instagram-60.png">
+                    <img src="/assets/images/icons/instagram/icons8-instagram-60.png" alt="github icon">
+                </picture></a>
+            </div>
+            <form id="mini-contact-form">
+                <label for="name" hidden>Name: </label>
+                <input id="name" name="name" type="text" placeholder="Name" required>
+            
+                <label for="email" hidden>Email: </label>
+                <input id="email" name="Email" type="text" placeholder="Email" required>
+            
+                <label for="message" hidden>Message: </label>
+                <textarea id="message" name="message" rows="4" cols="50">Message</textarea>
+                
             </form>
         </section>
         

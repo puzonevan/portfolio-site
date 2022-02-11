@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h2, h3, h4, h5, h6{
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: var(--text-white);
+}
+p{  
+    font-family: 'PT Sans', sans-serif;
+    color: var(--text-white);
+}
+
+body{
+    margin: 0 auto;
+    background: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Introduction */
+h1{
+    font-family: 'Bebas Neue', cursive;
+    color: var(--background-dark-blue);
+    text-align: center;
+}
+#intro{
+    height: 90vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+}
+
+#mini-contact{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+#mini-contact h2{
+    text-align: start;
+    width: 90%;
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    color: var(--background-red);
+}
+
+/* Mini Contact */
+#mini-contact h2{
+    text-align: end;
+    color: var(--background-blue);
+}
+#mini-contact div, #mini-contact form{
+    width: 40%;
+    height: auto;
+}
+
+#mini-contact form{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em;
+    background: hsla(228, 41%, 37%, 1);
+    background: linear-gradient(225deg, hsla(228, 41%, 37%, 1) 0%, hsla(201, 55%, 78%, 1) 100%);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#socials a{
+    width: 50%;
+}
+#socials source, #socials img{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+/* Footer */
+footer{
+    height: 10vh;
+}
+footer p{
+    color: var(--text-black);
+}
+
+/* Small Device */
+@media (max-width: 768px) {
+    h1{
+        letter-spacing: .7rem;
+    }  
+
+    #mini-contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    #mini-contact h2{
+        text-align: center;
+    }
+
+    #mini-contact div, #mini-contact form{
+        width: 50%;
+    }
+
+    #socials source, #socials img{
+        width: 80%;
+    }
+}
+
+/* Medium Device */
+@media (max-width: 992px) { 
+
+    #mini-contact div, #mini-contact form{
+        width: 70%;
+    }
+
+    #socials source, #socials img{
+        width: 25%;
+    }
+}

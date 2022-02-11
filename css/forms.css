@@ -24,15 +24,20 @@ textarea{
 
 #mini-contact form{
     background: hsla(0, 90%, 70%, 1);
-
     background: linear-gradient(135deg, hsla(0, 90%, 70%, 1) 0%, hsla(50, 86%, 80%, 1) 100%);
 
 }
 #mini-contact-form input, #mini-contact-form textarea{
-    background: var(--background-red);
-    border: 1px solid var(--background-white);
+    background: var(--background-white);
+    border: 3px solid var(--input-red);
 }
 
 #mini-contact-form input::placeholder , #mini-contact-form textarea{
-    color: var(--background-white);
+    color: var(--input-red);
 }
+input[type="submit"]{
+    padding: 1em 0;
+    color: var(--input-red);
+    width: 30%;
+}
+

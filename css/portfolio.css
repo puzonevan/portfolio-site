@@ -39,6 +39,7 @@ h1{
 }
 
 #resume{
+    padding: 2em;
     width: 80%;
     margin: 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -55,7 +56,7 @@ h1{
 #profile h2{
     font-size: 3rem;
     color: var(--background-blue);
-    padding: 0 1em;
+    
 }
 
 #work-skill{
@@ -68,6 +69,8 @@ h1{
     width: 40%;
     color: var(--background-dark-blue);
     text-align: start;
+    text-transform: uppercase; 
+    letter-spacing: .5rem;
     
 }
 #work-skill #work{
@@ -91,4 +94,65 @@ h1{
     font-weight: 400;
     color: #3A3B3C;
     margin: .5em 0;
+}
+
+/* Project Cards */
+#projects, #mini-contact{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+#projects h2, #mini-contact h2{
+    text-align: start;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    color: var(--background-red);
+}
+.project-card{
+    width: 27%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.project-card div{
+    height: 28%;
+}
+.project-card img{
+    width: auto;
+    max-height: 70%;
+}
+
+.project-card h3{
+    font-size: 1.5em;
+}
+.project-card p{
+    text-align: center;
+    width: 75%;
+    line-height: 1.5em;
+}
+#project-1{
+    background: var(--background-dark-blue);
+}
+#project-2{
+    background: var(--background-yellow);
+}
+#project-2 h3, #project-2 p{
+    color: var(--background-dark-blue);
+}
+#project-3{
+    background: var(--background-red);
+}
+
+footer{
+    height: 10vh;
+}
+footer p{
+    color: var(--text-black);
 }

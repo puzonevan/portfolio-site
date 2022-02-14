@@ -11,6 +11,15 @@
     }
 }
 
+@keyframes fadeDown {
+    from {
+
+    }
+    to{
+        
+    }
+}
+
 :root{
     --background-dark-blue: #24305E;
     --background-blue: #374785;

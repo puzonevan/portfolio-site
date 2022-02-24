@@ -13,10 +13,12 @@ document.getElementById('confirm').addEventListener('click', () =>{
 
 // Prompt click
 document.getElementById('prompt').addEventListener('click', () =>{
-    
+    let result = window.prompt('What month were you born in?', undefined);
+    output.innerHTML = result === "" ? "User entered nothing" : `You were born in: ${result}`;
 });
 
 // Safe Prompt click
 document.getElementById('safe-prompt').addEventListener('click', () =>{
-    
+    let result = DOMPurify.sanitize(window.prompt('What month were you born in?', undefined));
+    output.innerHTML = result === "" ? "User entered nothing" : `You were born in: ${result}`;
 });

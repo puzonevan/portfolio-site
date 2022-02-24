@@ -5,16 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../node_modules/dompurify/dist/purify.min.js"></script>
-    
+    <script src="../js/customdialog.js" type="module" async></script>
     <title>Evan Puzon</title>
 </head>
 <body>
     <dialog id="scooby">
+        <form method="dialog">
+            <p id="prompt-1"></p>
+            <menu>
+                <button value="cancel">Back</button>
+            </menu>
+        </form>
+    </dialog>
+    
+    <dialog id="doo">
+        <form method="dialog">
+            <p id="prompt-2"></p>
+            <menu>
+                <button value="cancel">Back</button>
+                <button id="confirm-1" value="default">Confirm</button>
+            </menu>
+        </form>
+    </dialog>
 
+    <dialog id="do">
+        <form method="dialog">
+            <p id="prompt-3"></p>
+            <menu>
+                <button value="cancel">Back</button>
+                <button id="confirm-3" value="default">Confirm</button>
+            </menu>
+        </form>
     </dialog>
 
     <button type="button" id="alert">Alert</button>
-    <button type="button" id="confirm">Confirm</button>
+    <button type="button" id="confirm-2">Confirm</button>
     <button type="button" id="prompt">Prompt</button>
     <output id="output"></output>
 </body>

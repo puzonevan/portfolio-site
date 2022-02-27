@@ -20,9 +20,24 @@ function deleteBlogPost(post, title, date, summary){
 }
 
 function editBlogPost(post, title, date, summary) {
+    let oldTitle = post.children[0].innerHTML;
+    let oldDate = post.children[1].innerHTML;
+    let oldSum = post.children[2].children[0].innerHTML;
+
     post.children[0].innerHTML = title;
     post.children[1].innerHTML = date;
     post.children[2].children[0].innerHTML = summary;
+
+    let posts = JSON.parse(blogStorage.getItem('posts') || "[]");
+    posts.forEach(post => {
+        if(post.title == oldTitle && post.date == oldDate && post.summary == oldSum){
+            post.title =  title;
+            post.date = date;
+            post.summary = summary;
+        }
+    });
+    blogStorage.setItem('posts', JSON.stringify(posts));
+    console.log(JSON.parse(blogStorage.getItem('posts')));
 }
 
 function addBlogPost(title, date, summary) {

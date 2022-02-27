@@ -1,4 +1,4 @@
-import { addBlogPost, deleteBlogPost, editBlogPost } from "./list.js";
+import { addBlogPost, deleteBlogPost, editBlogPost, readBlogPosts, addBlogStorage } from "./list.js";
 const addPost = document.getElementById('add-post');
 const dialog = document.getElementById('blog');
 const confirm = document.getElementById('confirm');
@@ -17,6 +17,9 @@ let currentPost;
 let currentTitle;
 let currentDate;
 let currentSummary;
+
+
+readBlogPosts();
 
 list.addEventListener('click', (e) => {
     if(e.target.classList.contains('delete')){
@@ -43,13 +46,13 @@ addPost.addEventListener('click', () => {
     dialog.showModal();
 });
 
-
 confirm.addEventListener('click', () => {
     const title = document.getElementById('title').value;
     const date = document.getElementById('date').value;
     const summary = document.getElementById('summary').value;
     if(title != "" && date != "" && summary != ""){
         addBlogPost(title, date, summary);
+        addBlogStorage(title, date, summary);
     }
 });
 
@@ -59,7 +62,4 @@ confirmDelete.addEventListener('click', () => {
 
 confirmEdit.addEventListener('click', () => {
     editBlogPost(currentPost, editTitle.value, editDate.value, editSum.value);
-})
-
-
-
+});

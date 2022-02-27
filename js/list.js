@@ -42,22 +42,25 @@ function editBlogPost(post, title, date, summary) {
 
 function addBlogPost(title, date, summary) {
     const post = document.createElement("li");
-    const titlePost = document.createElement("span");
+    post.setAttribute("class", "post");
+    const titlePost = document.createElement("h2");
     titlePost.innerHTML = title;
-    const datePost = document.createElement("span");
+    titlePost.setAttribute("class", "post-title");
+    const datePost = document.createElement("h3");
     datePost.innerHTML = date;
+    datePost.setAttribute("class", "post-date");
 
     post.appendChild(titlePost);
     post.appendChild(datePost);
     
-    const sumList = document.createElement("ul");
-    const sum = document.createElement("li");
-    const options = document.createElement("li");
-    const deletePost = document.createElement("span");
-    const editPost = document.createElement("span");
+    const sumList = document.createElement("div");
+    const sum = document.createElement("p");
+    sum.setAttribute("class", "post-summary");
+    const options = document.createElement("div");
+    options.setAttribute("class", "options");
+    const deletePost = document.createElement("p");
+    const editPost = document.createElement("p");
 
-    deletePost.innerHTML = "delete ";
-    editPost.innerHTML = "| edit";
     options.appendChild(deletePost);
     options.appendChild(editPost);
     deletePost.setAttribute("class", "delete");

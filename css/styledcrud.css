@@ -1,0 +1,74 @@
+
+body{
+    background-color: #EFEFEF;
+}
+h1{
+    font-family: sans-serif;
+    padding: 1rem;
+}
+h2{
+    font-family: sans-serif; 
+    color: #0F0F0F;
+    padding: 2rem 1.5rem 0rem 1.5rem;
+    
+}
+h3{
+    font-family: sans-serif;
+    color: #B9B9B9;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+}
+
+#blog-posts{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+#blog-posts li{
+    width: 40%;
+    margin: 1em;
+}
+.post{
+    background: #FFFFFF;
+}
+.post .post-summary{
+    padding: 0rem 1.5rem 0rem 1.5rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+.delete{
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/images/icons/trash/bin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 1rem;
+}
+
+.edit{
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/images/icons/pencil/pencil.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 1rem;
+}
+
+dialog{
+    background: #FFFFFF;
+    padding: 2rem;
+    border: none;
+}
+button{
+    background: none;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+#add-post{
+    margin-left: 3rem;
+}

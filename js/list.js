@@ -7,13 +7,15 @@ function deleteBlogPost(post, title, date, summary){
 }
 
 function editBlogPost(post, title, date, summary) {
-
+    post.children[0].innerHTML = title;
+    post.children[1].innerHTML = date;
+    post.children[2].children[0].innerHTML = summary;
 }
 
 function addBlogPost(title, date, summary) {
     const post = document.createElement("li");
     const titlePost = document.createElement("span");
-    titlePost.innerHTML = title + " | ";
+    titlePost.innerHTML = title;
     const datePost = document.createElement("span");
     datePost.innerHTML = date;
 
@@ -43,4 +45,4 @@ function addBlogPost(title, date, summary) {
 
 
 
-export { addBlogPost, deleteBlogPost }
+export { addBlogPost, deleteBlogPost, editBlogPost }

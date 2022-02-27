@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../node_modules/dompurify/dist/purify.min.js"></script>
-    <script src="../js/blog.js" type="module" defer></script>    
+    <script src="../js/blog.js" type="module" async></script>    
     <title>Evan Puzon</title>
 </head>
 <body>
     <h1>Big List of Blog Posts</h1>
     <ul id="blog-posts">
-        <li>Example Blog Post</li>
+        <li>Example Blog Post
+            <ul>
+                <li>Summary</li>
+                <li><span class="delete">Delete</span></li>
+            </ul>
+        </li>
     </ul>
 
     <dialog id="blog">
@@ -26,6 +31,33 @@
             <menu>
                 <button value="back">Back</button>
                 <button id="confirm" value="confirm">Confirm</button>
+            </menu>
+        </form>        
+    </dialog>
+
+    <dialog id="blog-edit">
+        <form method="dialog">
+            <label for="title-edit">Post Title: </label><br>
+            <input type="text" id="title-edit" name="title-edit"><br>
+            <label for="date-edit">Date: </label><br>
+            <input type="date" id="date-edit" name="date-edit"><br>
+            <label for="summary-edit">Summary: </label><br>
+            <textarea id="summary-edit" name="summary-edit" rows="5" cols="20">It all started when...</textarea>
+
+            <menu>
+                <button value="back-edit">Back</button>
+                <button id="confirm-edit" value="confirm-edit">Confirm</button>
+            </menu>
+        </form>        
+    </dialog>
+
+    <dialog id="blog-delete">
+        <form method="dialog">
+            <p>Are you sure you want to delete?</p>
+
+            <menu>
+                <button value="back-delete">Back</button>
+                <button id="confirm-delete" value="confirm-delete">Confirm</button>
             </menu>
         </form>        
     </dialog>

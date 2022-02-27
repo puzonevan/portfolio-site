@@ -22,15 +22,16 @@
         <form method="dialog">
             <p id="prompt-2"></p>
             <menu>
-                <button value="cancel">Back</button>
-                <button id="confirm-1" value="default">Confirm</button>
+                <button value="false">Back</button>
+                <button id="confirm-1" value="true">Confirm</button>
             </menu>
         </form>
     </dialog>
 
     <dialog id="do">
         <form method="dialog">
-            <p id="prompt-3"></p>
+            <label for="month" id="prompt-3"></label>
+            <input type="text" name="month" id="month">
             <menu>
                 <button value="cancel">Back</button>
                 <button id="confirm-3" value="default">Confirm</button>

@@ -5,10 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../node_modules/dompurify/dist/purify.min.js"></script>
-    
+    <script src="../js/blog.js" type="module" defer></script>    
     <title>Evan Puzon</title>
 </head>
 <body>
-    
+    <h1>Big List of Blog Posts</h1>
+    <ul id="blog-posts">
+        <li>Example Blog Post</li>
+    </ul>
+
+    <dialog id="blog">
+        <form method="dialog">
+            <label for="title">Post Title: </label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="date">Date: </label><br>
+            <input type="date" id="date" name="date"><br>
+            <label for="summary">Summary: </label><br>
+            <textarea id="summary" name="summary" rows="5" cols="20">It all started when...</textarea>
+
+            <menu>
+                <button value="back">Back</button>
+                <button id="confirm" value="confirm">Confirm</button>
+            </menu>
+        </form>        
+    </dialog>
+
+    <button type="button" id="add-post">Add Post</button>
 </body>
 </html>

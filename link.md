@@ -1,7 +1,3 @@
-# Evan Puzon
-
-## A15890485
-
 [Website Portfolio](https://cse134bhw4-5f836.web.app/)
 
 [Part 1: Simple Dialog](https://cse134bhw4-5f836.web.app/html/nativedialogs.html)

@@ -26,7 +26,26 @@ async function post(url = "", data = {}){
     return response.json();
 }
 
+async function deletePost(url = "", id){
+    const response = await fetch(`${url}?id=${id}`, {
+        method: 'DELETE', 
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    return response.json();
+}
 
+async function put(url="", data){
+    const response = await fetch(`${url}?id=${data.id}`, {
+        method: 'PUT', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    return response.json();
+}
 
 // Link buttons to methods 
 blogGet.addEventListener('click', () => {
@@ -44,3 +63,19 @@ blogPost.addEventListener('click', () => {
     post("https://httpbin.org/post", newPost)
         .then(post => console.log(post));
 });
+
+blogDelete.addEventListener('click', () =>{
+    deletePost("https://httpbin.org/delete", articleId.value)
+        .then(article => console.log(article));
+});
+
+blogPut.addEventListener('click', () =>{
+    const newPost = {
+        id: articleId.value,
+        title: articleName.value, 
+        body: articleBody.value
+    }
+    
+    put("https://httpbin.org/put", newPost)
+        .then(article => console.log(article));
+}); 

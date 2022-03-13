@@ -91,17 +91,78 @@ blogPut.addEventListener('click', () =>{
         });
 }); 
 
-function createList(post){
-    const ultimateList = document.createElement("ul");
-    const keys = Object.keys(post);
-    console.log(post);
-    console.log(keys);
+// function createList(post){
+//     const ultimateList = document.createElement("ul");
+//     const keys = Object.keys(post);
+//     console.log(post);
 
-    for(let key of keys){
-        let value = document.createElement("li");
-        let outputString = `${key}: ${post[key]}`;
-        value.innerHTML = outputString;
-        ultimateList.appendChild(value);
+//     for(let key of keys){
+//         let value = document.createElement("li");
+//         let outputString;
+//         if(typeof post[key] == "object"){
+//             const extraList = createListHelper(post[key])
+//             value.innerHTML = `${key}`;
+//             value.appendChild(extraList);
+//             ultimateList.appendChild(value);
+//         }else{
+//             outputString = `${key}: ${post[key]}`;
+//             value.innerHTML = outputString;
+//             ultimateList.appendChild(value);
+//         }
+        
+//     }
+//     response.appendChild(ultimateList);
+// }
+
+// function createListHelper(post){
+//     const ultimateList = document.createElement("ul");
+//     const keys = Object.keys(post);
+
+//     for(let key of keys){
+//         let value = document.createElement("li");
+//         let outputString = `${key}: ${post[key]}`;
+//         value.innerHTML = outputString;
+//         ultimateList.appendChild(value);
+//     }
+
+//     return ultimateList;
+// }
+
+function createList(post){
+    const bigList = document.createElement("ul");
+    // console.log(post);
+    createListHelper(bigList, post);
+    console.log(bigList);
+
+    while(response.firstChild){
+        response.removeChild(response.firstChild);
     }
-    response.appendChild(ultimateList);
+    response.appendChild(bigList);
+}
+
+function createListHelper(list, post){
+    console.log(post);
+    if(Object.keys(post) == 0){
+        return "";
+    }else{
+        for(let i = 0; i < Object.keys(post).length; i++){
+            const li = document.createElement("li");
+            if(post[Object.keys(post)[i]] == null || post[Object.keys(post)[i]] == undefined){
+                li.innerHTML = `${Object.keys(post)[i]} :`;
+                list.appendChild(li);
+                continue;
+            }
+            if(typeof(post[Object.keys(post)[i]]) == 'object'){
+                li.innerHTML = Object.keys(post)[i];
+                const newList = document.createElement("ul");
+                li.appendChild(newList);
+                list.appendChild(li);
+                createListHelper(newList, post[Object.keys(post)[i]]);
+            }
+            else{
+                li.innerHTML = `${Object.keys(post)[i]} : ${post[Object.keys(post)[i]]}`;
+                list.appendChild(li);
+            }
+        }
+    }
 }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/methodtest.js" type="module"></script>    
+    <script src="../js/methodtest.js" type="module" async></script>    
     <title>Method Test</title>
 </head>
 <body>
     <form id="blog">
         <label for="id">ID: </label><br>
-        <input type="number" name="id" id="id"><br>
+        <input type="number" name="id" id="article-id"><br>
 
         <label for="article-name">Title: </label><br>
         <input type="text" name="article-name" id="article-name"><br>
@@ -23,5 +23,7 @@
     <button id="blog-post" type="button" form="blog" formmethod="post">Publish Post</button>
     <button id="blog-put" type="button" form="blog" formmethod="put">Update Post</button>
     <button id="blog-delete" type="button" form="blog" formmethod="delete">Delete Post</button>
+
+    <output id="response"></output>
 </body>
 </html>

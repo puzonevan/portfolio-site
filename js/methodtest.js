@@ -9,6 +9,9 @@ const articleId = document.getElementById("article-id");
 const articleName = document.getElementById("article-name");
 const articleBody = document.getElementById("article-body");
 
+// Output 
+const response = document.getElementById("response");
+
 // POST, PUT, GET, DELETE methods
 async function get(url = "", id) {
     const response = await fetch(`${url}?id=${id}`);
@@ -50,7 +53,7 @@ async function put(url="", data){
 // Link buttons to methods 
 blogGet.addEventListener('click', () => {
     get("https://httpbin.org/get", articleId.value)
-        .then(post => console.log(post));
+        .then(post => {response.value = JSON.stringify(post, null, 4)});
 });
 
 blogPost.addEventListener('click', () => {
@@ -61,12 +64,12 @@ blogPost.addEventListener('click', () => {
     }
     
     post("https://httpbin.org/post", newPost)
-        .then(post => console.log(post));
+        .then(post => response.value = JSON.stringify(post, null, 4));
 });
 
 blogDelete.addEventListener('click', () =>{
     deletePost("https://httpbin.org/delete", articleId.value)
-        .then(article => console.log(article));
+        .then(article => response.value = JSON.stringify(article, null, 4));
 });
 
 blogPut.addEventListener('click', () =>{
@@ -77,5 +80,5 @@ blogPut.addEventListener('click', () =>{
     }
     
     put("https://httpbin.org/put", newPost)
-        .then(article => console.log(article));
+        .then(article => response.value = JSON.stringify(article, null, 4));
 }); 

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/methodtest.js" type="module"></script>    
     <title>Method Test</title>
 </head>
 <body>
-    <form>
+    <form id="blog">
         <label for="id">ID: </label><br>
         <input type="number" name="id" id="id"><br>
 
@@ -16,8 +17,11 @@
 
         <label for="article-body">Content: </label><br>
         <textarea id="article-body" name="article-body" rows="5" cols="40">It all started when...</textarea><br>
-
-        <input type="submit" value="Create">
     </form>
+
+    <button id="blog-get" type="button" form="blog" formmethod="get">Get Post</button>
+    <button id="blog-post" type="button" form="blog" formmethod="post">Publish Post</button>
+    <button id="blog-put" type="button" form="blog" formmethod="put">Update Post</button>
+    <button id="blog-delete" type="button" form="blog" formmethod="delete">Delete Post</button>
 </body>
 </html>

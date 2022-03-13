@@ -53,7 +53,9 @@ async function put(url="", data){
 // Link buttons to methods 
 blogGet.addEventListener('click', () => {
     get("https://httpbin.org/get", articleId.value)
-        .then(post => {response.value = JSON.stringify(post, null, 4)});
+        .then(post =>{
+            createList(post);
+        });
 });
 
 blogPost.addEventListener('click', () => {
@@ -64,12 +66,16 @@ blogPost.addEventListener('click', () => {
     }
     
     post("https://httpbin.org/post", newPost)
-        .then(post => response.value = JSON.stringify(post, null, 4));
+        .then(post =>{
+            createList(post);
+        });
 });
 
 blogDelete.addEventListener('click', () =>{
     deletePost("https://httpbin.org/delete", articleId.value)
-        .then(article => response.value = JSON.stringify(article, null, 4));
+        .then(post =>{
+            createList(post);
+        });
 });
 
 blogPut.addEventListener('click', () =>{
@@ -80,5 +86,22 @@ blogPut.addEventListener('click', () =>{
     }
     
     put("https://httpbin.org/put", newPost)
-        .then(article => response.value = JSON.stringify(article, null, 4));
+        .then(post =>{
+            createList(post);
+        });
 }); 
+
+function createList(post){
+    const ultimateList = document.createElement("ul");
+    const keys = Object.keys(post);
+    console.log(post);
+    console.log(keys);
+
+    for(let key of keys){
+        let value = document.createElement("li");
+        let outputString = `${key}: ${post[key]}`;
+        value.innerHTML = outputString;
+        ultimateList.appendChild(value);
+    }
+    response.appendChild(ultimateList);
+}

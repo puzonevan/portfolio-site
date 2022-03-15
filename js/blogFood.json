@@ -1,0 +1,10 @@
+{
+    "posts": [
+        {
+            "id": 0,
+            "title": "tacos",
+            "body": "these are the best", 
+            "date": "yes"
+        }
+    ]
+}

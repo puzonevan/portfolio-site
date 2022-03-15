@@ -62,7 +62,8 @@ blogPost.addEventListener('click', () => {
     const newPost = {
         id: articleId.value,
         title: articleName.value, 
-        body: articleBody.value
+        body: articleBody.value, 
+        date: new Date()
     }
     
     post("https://httpbin.org/post", newPost)
@@ -82,7 +83,8 @@ blogPut.addEventListener('click', () =>{
     const newPost = {
         id: articleId.value,
         title: articleName.value, 
-        body: articleBody.value
+        body: articleBody.value,
+        date: new Date()
     }
     
     put("https://httpbin.org/put", newPost)
@@ -90,43 +92,6 @@ blogPut.addEventListener('click', () =>{
             createList(post);
         });
 }); 
-
-// function createList(post){
-//     const ultimateList = document.createElement("ul");
-//     const keys = Object.keys(post);
-//     console.log(post);
-
-//     for(let key of keys){
-//         let value = document.createElement("li");
-//         let outputString;
-//         if(typeof post[key] == "object"){
-//             const extraList = createListHelper(post[key])
-//             value.innerHTML = `${key}`;
-//             value.appendChild(extraList);
-//             ultimateList.appendChild(value);
-//         }else{
-//             outputString = `${key}: ${post[key]}`;
-//             value.innerHTML = outputString;
-//             ultimateList.appendChild(value);
-//         }
-        
-//     }
-//     response.appendChild(ultimateList);
-// }
-
-// function createListHelper(post){
-//     const ultimateList = document.createElement("ul");
-//     const keys = Object.keys(post);
-
-//     for(let key of keys){
-//         let value = document.createElement("li");
-//         let outputString = `${key}: ${post[key]}`;
-//         value.innerHTML = outputString;
-//         ultimateList.appendChild(value);
-//     }
-
-//     return ultimateList;
-// }
 
 function createList(post){
     const bigList = document.createElement("ul");

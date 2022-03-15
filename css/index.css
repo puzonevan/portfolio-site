@@ -100,7 +100,7 @@ h1:hover{
 }
 .project-card img{
     width: auto;
-    max-height: 70%;
+    height: 70%;
 }
 
 .project-card h3{
@@ -122,6 +122,9 @@ h1:hover{
 }
 #project-3{
     background: var(--background-red);
+}
+#project-3 h3, #project-3 p{
+    color: var(--background-dark-blue);
 }
 
 /* Mini Contact */

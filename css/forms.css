@@ -33,11 +33,11 @@ textarea{
 }
 
 #mini-contact-form input::placeholder , #mini-contact-form textarea{
-    color: var(--input-red);
+    color: #1F1F1F;
 }
 input[type="submit"]{
     padding: 1em 0;
-    color: var(--input-red);
+    color: #1F1F1F;
     width: 30%;
 }
 

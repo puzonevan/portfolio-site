@@ -92,8 +92,7 @@ h1{
 #persona-1 button:hover{
     border: 2px solid var(--text-white);
     background: var(--background-red);
-    color: var(--text-white);
-    
+    color: var(--text-white);    
 }
 #persona-2{
     background: var(--background-light-blue);
@@ -108,29 +107,6 @@ h1{
 #current-game{
     text-align: start;
 }
-
-#hobbies h2{
-    text-align: end;
-    color: var(--background-dark-blue)
-}
-#hobby-1, #hobby-5{
-    background: var(--background-yellow);
-}
-#hobby-1 h3, #hobby-5 h3{
-    color: var(--text-black);
-}
-#hobby-2{
-    background: var(--background-blue);
-}
-#hobby-3{
-    background: var(--background-red);
-}  
-#hobby-6{
-    background: var(--background-light-blue);
-} 
-#hobby-4{
-    background: var(--background-dark-blue);
-} 
 
 
 #icons{
@@ -158,15 +134,15 @@ footer p{
     h1{
         letter-spacing: .7rem;
     }
-    #personas, #hobbies{
+    #personas{
         flex-direction: column;
         align-items: center;
     }
-    #personas h2, #hobbies h2{
+    #personas h2{
         text-align: center;
         font-size: 3rem;
     }
-    .persona, .hobby{
+    .persona{
         width: 80%;
     }
     .persona p{

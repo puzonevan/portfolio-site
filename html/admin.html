@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css" media="screen" type="text/css">
+    <script src="../js/admin.js" type="module" ></script>    
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <main>
+
+        <section class="crud" id="crud">
+            <form id="blog">
+                <label for="article-name">Title: </label><br>
+                <input type="text" name="article-name" id="article-name"><br>
+        
+                <label for="article-body">Content: </label><br>
+                <textarea id="article-body" name="article-body" rows="5" cols="40">It all started when...</textarea><br>
+            </form>
+            <button type="button" class="add-post" id="add-post">Add Post</button>
+        </section>
+
+        <section class="posts" id="posts">
+            <article>
+                <h3>Tacos</h3>
+                <h4>Today</h4>
+                <p>Crazy how good they are</p>
+            </article>
+        </section>      
+        
+        <dialog id="post-edit">
+            <form method="dialog">
+                <label for="title-edit">Post Title: </label><br>
+                <input type="text" id="title-edit" name="title-edit"><br>
+                <label for="date-edit">Date: </label><br>
+                <input type="date" id="date-edit" name="date-edit"><br>
+                <label for="summary-edit">Summary: </label><br>
+                <textarea id="summary-edit" name="summary-edit" rows="5" cols="20">It all started when...</textarea>
+    
+                <menu>
+                    <button value="back-edit">Back</button>
+                    <button id="confirm-edit" value="confirm-edit">Confirm</button>
+                </menu>
+            </form>        
+        </dialog>
+    
+        <dialog id="post-delete">
+            <form method="dialog">
+                <p>Are you sure you want to delete?</p>
+    
+                <menu>
+                    <button value="back-delete">Back</button>
+                    <button id="confirm-delete" value="confirm-delete">Confirm</button>
+                </menu>
+            </form>        
+        </dialog>
+        
+    </main>
+</body>
+</html>

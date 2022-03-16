@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js'
-import { getDatabase} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js"
+import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js"
 
 // TODO: Replace with your app's Firebase project configuration
 const firebaseConfig = {

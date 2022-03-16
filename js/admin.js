@@ -3,6 +3,7 @@ import { ref, onValue, set, remove, get} from "https://www.gstatic.com/firebasej
 
 const blogSection = document.getElementById("posts");
 const foodPost = ref(database, 'posts');
+let currentEdit;
 
 document.getElementById("add-post").addEventListener("click", () => {
     addPost(document.getElementById("article-name").value, document.getElementById("article-body").value)
@@ -11,8 +12,33 @@ document.getElementById("add-post").addEventListener("click", () => {
 document.getElementById('posts').addEventListener('click', (e) =>{
     if(e.target.classList.contains('delete')){
         deletePost(e.target.parentElement.children[0].innerHTML, e.target.parentElement.children[4].innerHTML);
+    }else if(e.target.classList.contains('edit')){
+        currentEdit = [...e.target.parentElement.parentElement.children].indexOf(e.target.parentElement);
+        showEditModal(e.target.parentElement.children[0].innerHTML, e.target.parentElement.children[4].innerHTML)
     }
 });
+
+// Edit Posts 
+function showEditModal(title, body){
+    document.getElementById('title-edit').value = title;
+    document.getElementById('summary-edit').value = body;
+    document.getElementById('post-edit').showModal();
+}
+document.getElementById('confirm-edit').addEventListener('click', () =>{
+    const newPost = {
+        title: document.getElementById('title-edit').value, 
+        body: document.getElementById('summary-edit').value, 
+        date: new Date().toDateString()
+    }
+    get(ref(database, 'posts/'))
+      .then((snapshot) => {
+          if(snapshot.exists()){
+              const snap = snapshot.val();
+              snap[currentEdit] = newPost
+              set(ref(database, 'posts/'), snap);
+          }
+      });
+})
 
 // Write Posts
 function addPost(title, body) { 

@@ -10,7 +10,7 @@ document.getElementById("add-post").addEventListener("click", () => {
 
 document.getElementById('posts').addEventListener('click', (e) =>{
     if(e.target.classList.contains('delete')){
-        deletePost(e.target.parentElement.lastChild.innerHTML);
+        deletePost(e.target.parentElement.children[0].innerHTML, e.target.parentElement.children[4].innerHTML);
     }
 });
 
@@ -36,12 +36,19 @@ function addPost(title, body) {
               }
               set(ref(database, '/'), newPostToAdd);
           }
-      })
+      });
 }
 
 // Delete Post
-function deletePost(id){
-    remove(ref(database, 'posts/' + id));
+function deletePost(title, body){
+    get(ref(database, 'posts/'))
+      .then((snapshot) => {
+          if(snapshot.exists()){
+              const snap = snapshot.val();
+              const updated = snap.filter(post => post.title !== title || post.body !== body);
+              set(ref(database, 'posts/'), updated);
+          }
+      })
 }
 
 // Read Posts
